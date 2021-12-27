@@ -26,3 +26,12 @@ class ProductPage(BasePage):
         price_element_in_basket = self.browser.find_element(*ProductPageLocators.PRICE_IN_BASKET)
         price_in_basket = price_element_in_basket.text
         assert price == price_in_basket, "prices are not equals"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.NAME_BOOK_IN_BASKET), \
+            "Success message is presented, but should not be"
+
+    def should_dissapear_of_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.NAME_BOOK_IN_BASKET), \
+            "Success message is presented, but should not be"
+
