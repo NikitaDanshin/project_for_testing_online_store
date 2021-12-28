@@ -13,3 +13,9 @@ class ProductPageLocators():
     NAME_BOOK = (By.XPATH, "//h1")
     PRICE_IN_BASKET = (By.CSS_SELECTOR, ".alertinner p strong")
     NAME_BOOK_IN_BASKET = (By.CSS_SELECTOR, ".alertinner strong")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link")
+    BASKET_LINK = (By.CSS_SELECTOR, ".btn-group a")
+    BASKET_MESSAGE = (By.ID, "content_inner")
